@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rick_morty_app/models/character.dart';
+import 'package:rick_morty_app/screens/character_detail_screen.dart';
 
 class CharacterCard extends StatelessWidget {
   final Character character;
@@ -17,7 +18,7 @@ class CharacterCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              // TODO: builder: (_) => CharacterDetailScreen(character: character),
+              builder: (_) => CharacterDetailScreen(character: character),
             ),
           );
         },

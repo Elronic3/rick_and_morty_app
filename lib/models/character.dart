@@ -4,6 +4,7 @@ class Character {
   final String status;
   final String species;
   final String image;
+  final String type;
   final String locationName;
   final List<String> episodeUrls;
 
@@ -13,6 +14,7 @@ class Character {
     required this.status,
     required this.species,
     required this.image,
+    required this.type,
     required this.locationName,
     required this.episodeUrls,
   });
@@ -24,6 +26,7 @@ class Character {
       status: json['status'],
       species: json['species'],
       image: json['image'],
+      type: json['type'] ?? '',
       // Безпечне отримання локації
       locationName: json['location'] != null
           ? json['location']['name']
